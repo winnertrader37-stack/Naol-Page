@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#080b12">
+    <meta name="description" content="Naol Page — Discover trading education, Forex, Gold, Crypto, business and luxury lifestyle videos and photos.">
+
+    <title>Naol Page — Discover More</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND EFFECTS -->
+    <div class="background-effects" aria-hidden="true">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- APP -->
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="#" class="brand" id="brandHome" aria-label="Naol Page Home">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="brand-text">
+                    <span class="brand-name">NAOL<span>PAGE</span></span>
+                    <small>DISCOVER MORE</small>
+                </div>
+            </a>
+
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="sidebar-section">
+                <p class="section-label">DISCOVER</p>
+
+                <button class="nav-item active" data-view="home">
+                    <i class="fa-solid fa-house"></i>
+                    <span>For You</span>
+                </button>
+
+                <button class="nav-item" data-view="videos">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <span>Videos</span>
+                </button>
+
+                <button class="nav-item" data-view="photos">
+                    <i class="fa-regular fa-images"></i>
+                    <span>Photos</span>
+                </button>
+
+                <button class="nav-item" data-view="trending">
+                    <i class="fa-solid fa-fire"></i>
+                    <span>Trending</span>
+                </button>
+
+                <button class="nav-item" data-view="saved">
+                    <i class="fa-regular fa-bookmark"></i>
+                    <span>Saved</span>
+                </button>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="section-label">CATEGORIES</p>
+
+                <button class="nav-item category-item" data-category="Forex Trading">
+                    <span class="category-dot forex-dot"></span>
+                    <span>Forex Trading</span>
+                </button>
+
+                <button class="nav-item category-item" data-category="Gold Trading">
+                    <span class="category-dot gold-dot"></span>
+                    <span>Gold Trading</span>
+                </button>
+
+                <button class="nav-item category-item" data-category="Crypto">
+                    <span class="category-dot crypto-dot"></span>
+                    <span>Crypto</span>
+                </button>
+
+                <button class="nav-item category-item" data-category="Education">
+                    <span class="category-dot education-dot"></span>
+                    <span>Education</span>
+                </button>
+
+                <button class="nav-item category-item" data-category="Business">
+                    <span class="category-dot business-dot"></span>
+                    <span>Business & Wealth</span>
+                </button>
+
+                <button class="nav-item category-item" data-category="Luxury Lifestyle">
+                    <span class="category-dot luxury-dot"></span>
+                    <span>Luxury Lifestyle</span>
+                </button>
+            </div>
+
+            <div class="sidebar-card">
+                <div class="sidebar-card-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <h3>Discover your world.</h3>
+
+                <p>
+                    Explore trading lessons, financial education and inspiring content.
+                </p>
+
+                <button id="exploreButton" class="small-gradient-button">
+                    Explore Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-footer">
+                <span class="online-indicator"></span>
+                <span>Naol Page</span>
+                <span class="version-label">BETA</span>
+            </div>
+
+        </aside>
+
+        <!-- MAIN AREA -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div class="mobile-brand">
+                    <button id="menuToggle" class="icon-button" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <a href="#" class="mobile-logo" id="mobileHome">
+                        NAOL<span>PAGE</span>
+                    </a>
+                </div>
+
+                <div class="search-wrapper">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Search Forex, Gold, Crypto, videos..."
+                            autocomplete="off"
+                            aria-label="Search videos and photos"
+                        >
+
+                        <button
+                            id="clearSearch"
+                            class="clear-search"
+                            aria-label="Clear search"
+                            hidden
+                        >
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+                        <button id="searchButton" class="search-button">
+                            Search
+                        </button>
+                    </div>
+
+                    <div class="search-suggestions" id="searchSuggestions" hidden>
+                        <p>QUICK SEARCH</p>
+
+                        <button data-query="Forex trading for beginners">
+                            <i class="fa-solid fa-chart-line"></i>
+                            Forex trading for beginners
+                        </button>
+
+                        <button data-query="XAUUSD Gold trading">
+                            <i class="fa-solid fa-coins"></i>
+                            Gold trading
+                        </button>
+
+                        <button data-query="ICT Smart Money Concepts">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            ICT Smart Money Concepts
+                        </button>
+
+                        <button data-query="Financial education">
+                            <i class="fa-solid fa-book-open"></i>
+                            Financial education
+                        </button>
+
+                        <button data-query="Luxury lifestyle">
+                            <i class="fa-solid fa-gem"></i>
+                            Luxury lifestyle
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button id="themeToggle" class="icon-button" title="Toggle theme" aria-label="Toggle theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <button id="installButton" class="install-button" hidden>
+                        <i class="fa-solid fa-download"></i>
+                        <span>Install App</span>
+                    </button>
+
+                    <button id="aboutButton" class="profile-button" title="About Naol Page">
+                        <span class="profile-avatar">N</span>
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- MOBILE CATEGORY SCROLLER -->
+            <div class="mobile-categories" id="mobileCategories">
+
+                <button class="chip active" data-view="home">For You</button>
+
+                <button class="chip" data-view="videos">Videos</button>
+
+                <button class="chip" data-view="photos">Photos</button>
+
+                <button class="chip" data-category="Forex Trading">Forex</button>
+
+                <button class="chip" data-category="Gold Trading">Gold</button>
+
+                <button class="chip" data-category="Crypto">Crypto</button>
+
+                <button class="chip" data-category="Education">Education</button>
+
+                <button class="chip" data-category="Luxury Lifestyle">Lifestyle</button>
+
+            </div>
+
+            <!-- HERO -->
+            <section class="hero-section" id="heroSection">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        YOUR WORLD. YOUR KNOWLEDGE.
+                    </div>
+
+                    <h1>
+                        Discover More.<br>
+                        <span class="gradient-text">Learn Without Limits.</span>
+                    </h1>
+
+                    <p>
+                        Explore trading education, financial knowledge, business,
+                        inspiring stories and luxury lifestyle — all in one place.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <button class="primary-button" id="startWatching">
+                            <i class="fa-solid fa-play"></i>
+                            Start Watching
+                        </button>
+
+                        <button class="secondary-button" id="heroSearch">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Find Content
+                        </button>
+
+                    </div>
+
+                    <div class="hero-features">
+
+                        <div class="hero-feature">
+                            <i class="fa-solid fa-video"></i>
+                            <span>Short Videos</span>
+                        </div>
+
+                        <div class="hero-feature">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Learn & Grow</span>
+                        </div>
+
+                        <div class="hero-feature">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <span>Mobile Ready</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="floating-card card-chart">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Market Learning</span>
+                        <strong>FX EDUCATION</strong>
+                    </div>
+
+                    <div class="floating-card card-play">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+
+                    <div class="floating-card card-gem">
+                        <i class="fa-solid fa-gem"></i>
+                        <span>Discover</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- DISCOVERY FILTERS -->
+            <section class="discovery-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">PERSONALIZED DISCOVERY</span>
+                        <h2>Explore Your Interests</h2>
+                    </div>
+
+                    <button class="text-button" id="resetFilters">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Reset
+                    </button>
+
+                </div>
+
+                <div class="filter-chips" id="filterChips">
+
+                    <button class="filter-chip active" data-category="All">
+                        <i class="fa-solid fa-compass"></i>
+                        All
+                    </button>
+
+                    <button class="filter-chip" data-category="Forex Trading">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Forex
+                    </button>
+
+                    <button class="filter-chip" data-category="Gold Trading">
+                        <i class="fa-solid fa-coins"></i>
+                        Gold
+                    </button>
+
+                    <button class="filter-chip" data-category="Crypto">
+                        <i class="fa-brands fa-bitcoin"></i>
+                        Crypto
+                    </button>
+
+                    <button class="filter-chip" data-category="Education">
+                        <i class="fa-solid fa-book-open"></i>
+                        Education
+                    </button>
+
+                    <button class="filter-chip" data-category="Business">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Business
+                    </button>
+
+                    <button class="filter-chip" data-category="Luxury Lifestyle">
+                        <i class="fa-solid fa-gem"></i>
+                        Lifestyle
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- TRENDING SEARCHES -->
+            <section class="trending-search-section">
+
+                <div class="trending-title">
+                    <i class="fa-solid fa-fire"></i>
+                    <span>Popular Searches</span>
+                </div>
+
+                <div class="trending-searches">
+
+                    <button data-query="Forex trading">
+                        # Forex Trading
+                    </button>
+
+                    <button data-query="Gold scalping">
+                        # Gold Scalping
+                    </button>
+
+                    <button data-query="Trading psychology">
+                        # Trading Psychology
+                    </button>
+
+                    <button data-query="Financial freedom">
+                        # Financial Freedom
+                    </button>
+
+                    <button data-query="Crypto education">
+                        # Crypto Education
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- CONTENT HEADER -->
+            <section class="content-section" id="contentSection">
+
+                <div class="section-heading content-heading">
+
+                    <div>
+                        <span class="eyebrow" id="contentEyebrow">HANDPICKED FOR YOU</span>
+                        <h2 id="contentTitle">Discover Content</h2>
+                        <p id="contentSubtitle">
+                            Explore learning videos and inspiring visual content.
+                        </p>
+                    </div>
+
+                    <div class="sort-wrapper">
+
+                        <label for="sortSelect">Sort:</label>
+
+                        <select id="sortSelect">
+                            <option value="recommended">Recommended</option>
+                            <option value="newest">Newest first</option>
+                            <option value="title">Title A–Z</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- RESULT COUNT -->
+                <div class="results-information">
+
+                    <span id="resultCount">Loading content...</span>
+
+                    <div class="source-indicator">
+                        <span class="source-dot"></span>
+                        <span id="sourceStatus">Demo content</span>
+                    </div>
+
+                </div>
+
+                <!-- VIDEO AND PHOTO GRID -->
+                <div class="content-grid" id="contentGrid" aria-live="polite">
+
+                    <!-- JavaScript content will appear here -->
+
+                    <div class="loading-card">
+                        <div class="loading-spinner"></div>
+                        <p>Preparing your discovery feed...</p>
+                    </div>
+
+                </div>
+
+                <!-- EMPTY STATE -->
+                <div class="empty-state" id="emptyState" hidden>
+
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <h3>No content found</h3>
+
+                    <p>
+                        Try another search term or select a different category.
+                    </p>
+
+                    <button class="primary-button" id="emptyReset">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Show All Content
+                    </button>
+
+                    <button class="secondary-button" id="youtubeSearchButton">
+                        <i class="fa-brands fa-youtube"></i>
+                        Search YouTube
+                    </button>
+
+                </div>
+
+                <!-- LOAD MORE -->
+                <div class="load-more-wrapper" id="loadMoreWrapper" hidden>
+
+                    <button class="secondary-button" id="loadMoreButton">
+                        Load More
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- SHORT VIDEO PLAYER MODAL -->
+            <div class="modal-overlay" id="videoModal" hidden>
+
+                <div class="video-modal" role="dialog" aria-modal="true" aria-label="Video player">
+
+                    <button class="modal-close" id="closeVideoModal" aria-label="Close video">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <div class="video-modal-content" id="videoModalContent">
+
+                        <!-- Video player will be inserted here -->
+
+                    </div>
+
+                    <div class="video-modal-actions">
+
+                        <button id="modalLikeButton" class="modal-action">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+
+                        <button id="modalSaveButton" class="modal-action">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+
+                        <button id="modalShareButton" class="modal-action">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <span>Share</span>
+                        </button>
+
+                        <button id="modalCopyButton" class="modal-action">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>Copy Link</span>
+                        </button>
+
+                    </div>
+
+                    <div class="modal-video-info" id="modalVideoInfo"></div>
+
+                    <div class="modal-navigation">
+
+                        <button id="previousVideo" aria-label="Previous video">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            Previous
+                        </button>
+
+                        <button id="nextVideo" aria-label="Next video">
+                            Next
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ABOUT MODAL -->
+            <div class="modal-overlay" id="aboutModal" hidden>
+
+                <div class="simple-modal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+
+                    <button class="modal-close" id="closeAboutModal" aria-label="Close about">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <div class="about-logo">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+
+                    <h2 id="aboutTitle">Welcome to Naol Page</h2>
+
+                    <p>
+                        A discovery platform for trading education, Forex, Gold,
+                        Crypto, financial knowledge, business and lifestyle content.
+                    </p>
+
+                    <p class="about-note">
+                        Trading involves risk. Educational content is not financial advice.
+                    </p>
+
+                    <button class="primary-button" id="closeAboutAction">
+                        Let's Explore
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- TOAST NOTIFICATIONS -->
+            <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+            <!-- FOOTER -->
+            <footer class="app-footer">
+
+                <a href="#" class="footer-brand" id="footerHome">
+                    NAOL<span>PAGE</span>
+                </a>
+
+                <p>
+                    Discover knowledge. Explore ideas. Keep learning.
+                </p>
+
+                <span class="footer-disclaimer">
+                    Educational content only. Trading involves financial risk.
+                </span>
+
+                <span class="copyright">
+                    © <span id="currentYear">2026</span> Naol Page
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- MOBILE BOTTOM NAVIGATION -->
+    <nav class="bottom-navigation" aria-label="Mobile navigation">
+
+        <button class="bottom-nav-item active" data-view="home">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </button>
+
+        <button class="bottom-nav-item" data-view="videos">
+            <i class="fa-solid fa-circle-play"></i>
+            <span>Videos</span>
+        </button>
+
+        <button class="bottom-create-button" id="createButton" aria-label="Create a post">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <button class="bottom-nav-item" id="bottomSearchButton">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+        </button>
+
+        <button class="bottom-nav-item" data-view="saved">
+            <i class="fa-regular fa-bookmark"></i>
+            <span>Saved</span>
+        </button>
+
+    </nav>
+
+    <!-- CREATE POST MODAL -->
+    <div class="modal-overlay" id="createModal" hidden>
+
+        <div class="simple-modal create-modal" role="dialog" aria-modal="true" aria-labelledby="createTitle">
+
+            <button class="modal-close" id="closeCreateModal" aria-label="Close create post">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2 id="createTitle">Create a Post</h2>
+
+            <p>
+                Preview your own photo or video. Publishing it for all users
+                requires a connected storage and backend service.
+            </p>
+
+            <label class="upload-area" for="mediaUpload">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <strong>Select Photo or Video</strong>
+
+                <span>Choose a file from your device</span>
+
+            </label>
+
+            <input
+                type="file"
+                id="mediaUpload"
+                accept="image/*,video/*"
+                hidden
+            >
+
+            <div id="uploadPreview" class="upload-preview" hidden></div>
+
+            <label for="postCaption" class="form-label">
+                Caption
+            </label>
+
+            <textarea
+                id="postCaption"
+                placeholder="Write something about your post..."
+                maxlength="500"
+                rows="3"
+            ></textarea>
+
+            <label for="postCategory" class="form-label">
+                Category
+            </label>
+
+            <select id="postCategory">
+
+                <option value="Forex Trading">Forex Trading</option>
+                <option value="Gold Trading">Gold Trading</option>
+                <option value="Crypto">Crypto</option>
+                <option value="Education">Education</option>
+                <option value="Business">Business & Wealth</option>
+                <option value="Luxury Lifestyle">Luxury Lifestyle</option>
+                <option value="Other">Other</option>
+
+            </select>
+
+            <button class="primary-button create-submit" id="publishButton">
+                <i class="fa-solid fa-paper-plane"></i>
+                Create Preview Post
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
